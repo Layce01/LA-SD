@@ -1,2 +1,0 @@
-servidor.IniciarServidor
-servidor.IniciaServidor
