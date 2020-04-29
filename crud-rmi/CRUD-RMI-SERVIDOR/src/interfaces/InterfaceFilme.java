@@ -19,6 +19,7 @@ public void setGenero(String genero)throws RemoteException;
 public int getClassificacao()throws RemoteException;        
 public void setClassificacao(int classificacao)throws RemoteException;  
 public String getNome()throws RemoteException;
-public void setNome(String nome)throws RemoteException;        
+public void setNome(String nome)throws RemoteException;
+public void adicionar() throws RemoteException;
         
 }

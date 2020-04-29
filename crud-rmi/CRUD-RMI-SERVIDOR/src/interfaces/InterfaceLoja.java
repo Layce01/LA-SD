@@ -21,5 +21,5 @@ public int getCnpj()throws RemoteException;
 public void setCnpj(int cnpj)throws RemoteException;        
 public String getEndereco()throws RemoteException;        
 public void setEndereco(String endereco)throws RemoteException;        
-        
+public void adicionar() throws RemoteException;       
 }

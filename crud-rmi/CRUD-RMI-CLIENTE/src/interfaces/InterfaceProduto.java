@@ -10,4 +10,5 @@ public interface InterfaceProduto extends Remote {
     public void setPreco(double preco) throws RemoteException;
     public int getQuantidade() throws RemoteException;
     public void setQuantidade(int quantidade) throws RemoteException;
+    public void adicionar() throws RemoteException;
 }

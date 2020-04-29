@@ -10,7 +10,6 @@ package views;
  * @author lucas
  */
 import interfaces.InterfaceCarro;
-import interfaces.InterfaceProduto;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.rmi.Naming;
@@ -59,11 +58,12 @@ public class AdicionarCarro extends JPanel implements ActionListener  {
         
 
         try {
-            InterfaceCarro carroRemoto = (InterfaceCarro) Naming.lookup("rmi://192.168.1.130:1099/Produto");
+            InterfaceCarro carroRemoto = (InterfaceCarro) Naming.lookup("rmi://192.168.1.130:1099/Carro");
 
             carroRemoto.setModelo(modelo);
             carroRemoto.setPlaca(placa);
             carroRemoto.setCor(cor);
+            carroRemoto.adicionar();
 
             String texto_retorno = "\nModelo: " + carroRemoto.getModelo() + "\nPlaca: "
                     + carroRemoto.getPlaca() + "\nCor: " + carroRemoto.getCor();

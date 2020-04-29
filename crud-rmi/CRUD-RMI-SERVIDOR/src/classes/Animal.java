@@ -1,5 +1,6 @@
 package classes;
 
+import dao.AnimalDAO;
 import interfaces.InterfaceAnimal;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -42,6 +43,10 @@ public class Animal extends UnicastRemoteObject implements InterfaceAnimal{
     @Override
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+    @Override
+    public void adicionar(){
+        AnimalDAO.insert(this);
     }
     
     

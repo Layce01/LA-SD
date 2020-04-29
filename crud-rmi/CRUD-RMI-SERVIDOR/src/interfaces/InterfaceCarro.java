@@ -20,6 +20,7 @@ public void setModelo(String modelo)throws RemoteException;
 public String getPlaca()throws RemoteException;
 public void setPlaca(String placa)throws RemoteException;        
 public String getCor()throws RemoteException;        
-public void setCor(String cor)throws RemoteException;        
+public void setCor(String cor)throws RemoteException; 
+public void adicionar() throws RemoteException;
         
 }

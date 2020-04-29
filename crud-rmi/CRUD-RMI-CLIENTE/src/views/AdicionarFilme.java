@@ -6,7 +6,6 @@
 package views;
 
 import interfaces.InterfaceFilme;
-import interfaces.InterfaceProduto;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.rmi.Naming;
@@ -60,6 +59,8 @@ public class AdicionarFilme extends JPanel implements ActionListener {
             filmeRemoto.setNome(nome);
             filmeRemoto.setGenero(genero);
             filmeRemoto.setClassificacao(classificacao);
+            filmeRemoto.adicionar();
+
 
             String texto_retorno = "\nNome: " + filmeRemoto.getNome() + "\nGenero: "
                     + filmeRemoto.getGenero() + "\nClassificação: " + filmeRemoto.getClassificacao();

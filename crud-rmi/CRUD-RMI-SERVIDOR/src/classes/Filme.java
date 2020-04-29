@@ -9,6 +9,7 @@ package classes;
  *
  * @author lucas
  */
+import dao.FilmeDAO;
 import interfaces.InterfaceFilme;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -52,7 +53,10 @@ public class Filme extends UnicastRemoteObject implements InterfaceFilme {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
+    @Override
+    public void adicionar(){
+        FilmeDAO.insert(this);
+    }
     
     
 }

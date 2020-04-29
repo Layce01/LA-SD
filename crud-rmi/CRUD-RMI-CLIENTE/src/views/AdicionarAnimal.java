@@ -8,7 +8,6 @@ package views;
 import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 import interfaces.InterfaceAnimal;
-import interfaces.InterfaceProduto;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.rmi.Naming;
@@ -58,14 +57,15 @@ public class AdicionarAnimal extends JPanel implements ActionListener{
         
 
         try {
-            InterfaceAnimal produtoRemoto = (InterfaceAnimal) Naming.lookup("rmi://192.168.1.130:1099/Animal");
+            InterfaceAnimal animalRemoto = (InterfaceAnimal) Naming.lookup("rmi://192.168.1.130:1099/Animal");
 
-            produtoRemoto.setDescricao(descricao);
-            produtoRemoto.setEspecie(especie);
-            produtoRemoto.setTipo(tipo);
+            animalRemoto.setDescricao(descricao);
+            animalRemoto.setEspecie(especie);
+            animalRemoto.setTipo(tipo);
+            animalRemoto.adicionar();
 
-            String texto_retorno = "\nEspécie: " + produtoRemoto.getEspecie() + "\nTipo: "
-                    + produtoRemoto.getTipo() + "\nDescrição: " + produtoRemoto.getDescricao();
+            String texto_retorno = "\nEspécie: " + animalRemoto.getEspecie() + "\nTipo: "
+                    + animalRemoto.getTipo() + "\nDescrição: " + animalRemoto.getDescricao();
 
             JOptionPane.showMessageDialog(null, texto_retorno, "Dados do Animal", JOptionPane.INFORMATION_MESSAGE);
         } catch (RemoteException re) {

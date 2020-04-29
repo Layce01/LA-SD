@@ -9,6 +9,7 @@ package classes;
  *
  * @author lucas
  */
+import dao.LojaDAO;
 import interfaces.InterfaceLoja;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -47,9 +48,13 @@ public class Loja extends UnicastRemoteObject implements InterfaceLoja{
     public String getEndereco() {
         return endereco;
     }
-
+    @Override
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+    @Override
+    public void adicionar(){
+        LojaDAO.insert(this);
     }
 
 

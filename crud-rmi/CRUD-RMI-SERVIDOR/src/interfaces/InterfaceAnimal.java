@@ -20,4 +20,5 @@ public interface InterfaceAnimal extends Remote{
     public void setEspecie(String especie) throws RemoteException;
     public void setDescricao(String descricao )throws RemoteException;
     public void setTipo(String tipo) throws RemoteException;
+    public void adicionar() throws RemoteException;
             }

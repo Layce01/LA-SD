@@ -9,6 +9,7 @@ package classes;
  *
  * @author lucas
  */
+import dao.CarroDAO;
 import interfaces.InterfaceCarro;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -51,6 +52,11 @@ public class Carro extends UnicastRemoteObject implements InterfaceCarro{
     @Override
     public void setCor(String cor) {
         this.cor = cor;
+    }
+
+    @Override
+    public void adicionar(){
+        CarroDAO.insert(this); 
     }
     
     
