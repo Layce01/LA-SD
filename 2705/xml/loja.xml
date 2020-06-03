@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<loja cnpj="87654321">
+    <nome>Refrigerante</nome>
+    <endereco>Endereco 2</endereco>   
+</loja>

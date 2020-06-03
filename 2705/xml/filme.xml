@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<filme id="2">
+    <nome>Filme 2</nome>
+    <genero>Romance</genero>
+    <classificacao>14</classificacao>
+</filme>
